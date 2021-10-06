@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>Assignment 6</title>
+
+<body>
+    
+
+    <h2>Pass Phrase by Jupally Kavya</h2>
+
+    <form>
+        <label for="form1_age">Enter the secret phrase</label>
+        <input type="password" id="form1_age" name="form1_age" min=10 max=50 step=2 value="let me in"> <br>
+
+        <label for="form1_nick">Enter a phrase</label>
+        <input type="text" id="form1_nick" name="form1_nick" autofocus> <br>
+
+        <input type="button" onclick="processPhrase()" value="Check the phrase">
+    </form>
+
+
+    <div class="container borders">
+        <p id="result">_____________ </p>
+    </div>
+
+    <div class="container">
+        <img id="image" src= "img/img1.jpg" class="img-fluid" alt="Jaguar" height="200" width="200" onclick="newImage()">
+    </div>
+
+    <script>
+        let usingImage = 1;
+        let correct = 0;
+        let wrong = 0;
+        function processPhrase() {
+            console.log("Getting form values")
+            age = document.getElementById("form1_age").value
+            nick = document.getElementById("form1_nick").value
+            // confirmed = confirm("Are these the values? " + age + " and " + nick)
+
+
+            out = document.getElementById("result")
+            if (age == nick) {
+                alert("Access allowed")
+                correct = correct + 1
+                out.innerHTML = "correct : " + correct + " wrong : " + wrong
+
+            } else {
+                alert("Access denied")
+                wrong = wrong + 1
+                out.innerHTML = "correct : " + correct + " wrong : " + wrong
+            }
+        }
+        function newImage() {
+            image = document.getElementById("image")
+            switch (usingImage) {
+                case 1:
+                    image.src = "img/img1.jpg"
+                    usingImage = usingImage + 1
+                    break
+                case 2:
+                    image.src = "img/img2.jpg"
+                    usingImage = usingImage + 1
+                    break
+                case 3:
+                    image.src = "img/img3.jpg"
+                    usingImage = usingImage + 1
+                    break
+                default:
+                    break
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
