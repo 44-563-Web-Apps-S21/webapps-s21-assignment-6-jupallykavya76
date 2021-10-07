@@ -14,9 +14,9 @@
  </head>
 <body>
 <div class="container-fluid">
-<h2> Compute of arithmetic operation </h2>
+<h2>Jupally Kavya computes</h2>
 
-<form style="width: 200px; border: 3px solid black; padding: 20px;" class="form-check">
+<form style="width: 200px; border: 3px solid rgb(252, 9, 9); padding: 20px;" class="form-check">
     <label for="form1_base" class="form-label">Enter a base</label>
     <input type ="number" class="form-control" id="form1_base" name="form1_base" min=10 max=50 step=2 value=10> <br>
 
@@ -27,7 +27,7 @@
 </form>
 
 
-<p style="margin: 10px 0; background-color: lightgreen;" id="result">This text will be replaced </p>
+<p style="margin: 10px 0; background-color: rgb(70, 207, 70);" id="result">This text will be replaced </p>
 
 <form>
     <input type="radio" id="addition" name="operations" value="plus"   
@@ -47,7 +47,7 @@
    <label for="division">/</label>
  </form>
 
-<p style="margin: 10px 0; background-color: lightgreen;" id="output">This text will be replaced </p>
+<p style="margin: 10px 0; background-color: rgb(46, 177, 46);" id="output">This text will be replaced </p>
 
 </div>
 <script> 
@@ -62,7 +62,6 @@ function powers(){
         out.innerHTML = "Power of bases are: " + result;
     }
 }
-
 
 function processRadio(){
     let result;
